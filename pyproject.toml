@@ -1,0 +1,32 @@
+[project]
+name = "quantstats-omni"
+version = "0.0.63"
+description = "Portfolio analytics for quants - workspace version"
+readme = "README.rst"
+requires-python = ">=3.10,<3.13"
+authors = [{name = "Ran Aroussi"}, {name = "Omni Trader (fork)"}]
+
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "seaborn>=0.12.0",
+    "matplotlib>=3.7.0",
+    "scipy>=1.10.0",
+    "tabulate>=0.9.0",
+    "yfinance>=0.2.65",
+    "python-dateutil>=2.8.0",
+    "packaging>=20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["quantstats"]
